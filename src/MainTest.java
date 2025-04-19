@@ -6,6 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 public class MainTest {
+
+    // 2. Напишите метод, который принимает массив целых чисел и возвращает сумму всех его элементов.
     @Test
     public void sumArrayWithPositiveNumbersTest() {
         int[] input = {1, 2, 3, 4, 5};
@@ -34,6 +36,7 @@ public class MainTest {
         assertEquals(expected, Main.sumArray(input));
     }
 
+    // 3. Реализуйте метод для поиска минимального элемента в одномерном массиве
     @Test
     public void findMinWithPositiveNumbersTest() {
         int[] input = {5, 3, 8, 1, 9};
@@ -67,6 +70,7 @@ public class MainTest {
         assertThrows(IllegalArgumentException.class, () -> Main.findMin(input));
     }
 
+    // 5. Напишите метод, который инвертирует порядок элементов в одномерном массиве
     @Test
     public void reverseIntArrayWithValuesTest() {
         int[] input = {1, 2, 3, 4, 5};
@@ -88,6 +92,7 @@ public class MainTest {
         assertArrayEquals(expected, input);
     }
 
+    // 6. Напишите метод, который проверяет, есть ли в массиве повторяющиеся элементы
     @Test
     public void findFirstDuplicateWithDuplicatesTest() {
         int[] input = {7, 3, 1, 4, 2, 5, 5, 6};
@@ -112,6 +117,7 @@ public class MainTest {
         assertNull(Main.findFirstDuplicate(input));
     }
 
+    // 7. Напишите метод, который заменяет все отрицательные числа в массиве на их абсолютные значения.
     @Test
     public void replaceNegativesWithAbsoluteTest() {
         int[] input = {-1, 2, -3, 4, -5};
@@ -121,7 +127,7 @@ public class MainTest {
     }
 
     @Test
-    public void replaceNegativesWithAbsolute_AllNegativeTest() {
+    public void replaceNegativesWithAbsoluteAllNegativeTest() {
         int[] input = {-10, -20, -30};
         int[] expected = {10, 20, 30};
         Main.replaceNegativesWithAbsolute(input);
@@ -129,7 +135,7 @@ public class MainTest {
     }
 
     @Test
-    public void replaceNegativesWithAbsolute_EmptyArrayTest() {
+    public void replaceNegativesWithAbsoluteEmptyArrayTest() {
         int[] input = {};
         int[] expected = {};
         Main.replaceNegativesWithAbsolute(input);
@@ -137,11 +143,13 @@ public class MainTest {
     }
 
     @Test
-    public void replaceNegativesWithAbsolute_NullArrayTest() {
+    public void replaceNegativesWithAbsoluteNullArrayTest() {
         assertThrows(IllegalArgumentException.class, () ->
                 Main.replaceNegativesWithAbsolute(null));
     }
 
+    // Многомерные массивы
+    // 1. Создайте двумерный массив 3x3, заполните его единицами на главной диагонали и нулями в остальных ячейках. Выведите массив
     @Test
     public void createDiagonalMatrixStructureTest() {
         int[][] matrix = Main.createAndPrintDiagonalMatrix();
@@ -171,6 +179,7 @@ public class MainTest {
         assertNotNull(matrix);
     }
 
+    // 2. Напишите метод, вычисляющий сумму всех элементов в двумерном массиве
     @Test
     public void sumOfElementsStandardCaseTest() {
         int[][] array = {
@@ -178,7 +187,8 @@ public class MainTest {
                 {4, 5, 6},
                 {7, 8, 9}
         };
-        assertEquals(45, Main.sumOfElements(array));
+        int expected = 45;
+        assertEquals(expected, Main.sumOfElements(array));
     }
 
     @Test
@@ -186,7 +196,8 @@ public class MainTest {
         int[][] array = {
                 {1, 2, 3}
         };
-        assertEquals(6, Main.sumOfElements(array));
+        int expected = 6;
+        assertEquals(expected, Main.sumOfElements(array));
     }
 
     @Test
@@ -196,13 +207,15 @@ public class MainTest {
                 {2},
                 {3}
         };
-        assertEquals(6, Main.sumOfElements(array));
+        int expected = 6;
+        assertEquals(expected, Main.sumOfElements(array));
     }
 
     @Test
     public void sumOfElementsEmptyArrayTest() {
         int[][] array = {};
-        assertEquals(0, Main.sumOfElements(array));
+        int expected = 0;
+        assertEquals(expected, Main.sumOfElements(array));
     }
 
     @Test
@@ -213,6 +226,7 @@ public class MainTest {
         assertEquals(0, Main.sumOfElements(array));
     }
 
+    // 3. Реализуйте поиск максимального элемента в матрице и вывод его координат (строка, столбец)
     @Test
     public void findMaxElementStandardCaseTest() {
         int[][] matrix = {
@@ -279,6 +293,7 @@ public class MainTest {
         assertArrayEquals(expected, result);
     }
 
+    // 4. Реализуйте проверку, является ли двумерный массив квадратным (количество строк = количеству столбцов)
     @Test
     public void isSquareMatrixSquareTest() {
         int[][] matrix = {
@@ -347,6 +362,8 @@ public class MainTest {
         assertEquals(expected, result);
     }
 
+    /* 5. Напишите метод, который находит сумму элементов каждой строки, минимальное и
+             максимальное значение двумерного массива и выводит результаты */
     @Test
     public void analyzeMatrixStandardCaseTest() {
         int[][] matrix = {
@@ -380,6 +397,7 @@ public class MainTest {
         assertEquals(expected, result);
     }
 
+    // 6. Создайте двумерный массив, заполните его так, чтобы элементы на четных позициях были 0, на нечетных — 1.
     @Test
     public void generateAndPrintMatrixValidTest() {
         Integer rows = 4;

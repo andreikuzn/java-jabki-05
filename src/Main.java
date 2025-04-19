@@ -7,48 +7,48 @@ public class Main {
     private static final Random RANDOM = new Random();
 
     public static void main(String[] args) {
-        //int[] numbers = new int[10];
-        //String[] names = {"Ilya", "Elena", "Андрей"};
+        int[] numbers = new int[10];
+        String[] names = {"Ilya", "Elena", "Андрей"};
 
-        //System.out.println(numbers);
+        System.out.println(numbers);
 
-        /*
         for (int i = 0; i < numbers.length; i++) {
             System.out.println(numbers[i]);
         }
-         */
 
-        /*
         for (String name : names) {
             System.out.println(name);
         }
-         */
 
         // Запись значение
-        //numbers[0] = 1;
+        numbers[0] = 1;
 
-        // System.out.println(numbers[0]);
-        // System.out.println(names[1]);
-        // System.out.println(names.length);
+        System.out.println(numbers[0]);
+        System.out.println(names[1]);
+        System.out.println(names.length);
 
-        // System.out.println(average(1000));
-        // System.out.println(averageV2(1000));
+        System.out.println(average(1000));
+        System.out.println(averageV2(1000));
 
-        //int[][] matrix = new int[10][10];
-        //int[][] grid = {{1, 2}, {3, 4}};
+        int[][] matrix = new int[10][10];
+        int[][] grid = {{1, 2}, {3, 4}};
 
-        // print(matrix);
-        // print(grid);
+        print(matrix);
+        print(grid);
 
-        // printIndex(matrix);
-        // printIndex(grid);
+        printIndex(matrix);
+        printIndex(grid);
 
-        //int[][] data = createMatrix(100);
-        //print(data);
-        //sum(data);
+        int[][] data = createMatrix(100);
+        print(data);
+        sum(data);
 
-        int[] numbers = {1, 2, 3, 4, 5};
-        printArray(numbers);
+        /**
+         * ДЗ5
+         */
+
+        int[] arrayNumbers = {1, 2, 3, 4, 5};
+        printArray(arrayNumbers);
 
         int[] array = {1, 2, 3, 4, 5};
         System.out.println("Сумма элементов массива: " + sumArray(array));
@@ -62,8 +62,8 @@ public class Main {
         };
         printMonthsStartingWithM(months);
 
-        int[] arrayNumbers = {1, 2, 3, 4, 5};
-        reverseArray(arrayNumbers);
+        int[] arrayNums = {1, 2, 3, 4, 5};
+        reverseArray(arrayNums);
 
         int[] dublicateNums = {7, 3, 1, 4, 2, 5, 5, 6};
         System.out.println("Найден дубликат числа: " + findFirstDuplicate(dublicateNums));
@@ -76,13 +76,13 @@ public class Main {
         int[][] sumOfArray = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         System.out.println("Сумма всех элементов массива: " + sumOfElements(sumOfArray));
 
-        int[][] matrix = {
+        int[][] matrixForAnalize = {
                 {3, 5, 7},
                 {2, 8, 1},
                 {9, 4, 6}
         };
-        int[] result = findMaxElement(matrix);
-        System.out.println("Максимальный элемент: " + matrix[result[0]][result[1]]);
+        int[] result = findMaxElement(matrixForAnalize);
+        System.out.println("Максимальный элемент: " + matrixForAnalize[result[0]][result[1]]);
         System.out.println("Координаты: строка = " + result[0] + ", столбец = " + result[1]);
 
         int[][] squareMatrix = {
@@ -296,7 +296,6 @@ public class Main {
     }
 
     // Многомерные массивы
-
     // 1. Создайте двумерный массив 3x3, заполните его единицами на главной диагонали и нулями в остальных ячейках. Выведите массив
 
     public static int[][] createAndPrintDiagonalMatrix() {
