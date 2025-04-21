@@ -393,28 +393,16 @@ public class Main {
         if (rows == null || cols == null || rows <= 0 || cols <= 0) {
             return "Матрица не задана или размеры некорректны.";
         }
-        int[][] matrix = new int[rows][cols];
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                if ((i + j) % 2 == 0) {
-                    matrix[i][j] = 0;
-                } else {
-                    matrix[i][j] = 1;
-                }
-            }
-        }
+
         String result = "";
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
-                result += matrix[i][j];
-                if (j < cols - 1) {
-                    result += " ";
-                }
+                result += ((i + j) % 2 == 0 ? "0" : "1");
+                if (j < cols - 1) result += " ";
             }
-            if (i < rows - 1) {
-                result += "\n";
-            }
+            if (i < rows - 1) result += "\n";
         }
+
         return result;
     }
 }
