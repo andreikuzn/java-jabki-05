@@ -190,7 +190,6 @@ public class Main {
 
     // Одномерные массивы
     // 1. Создайте метод, который выводит массив в консоль.
-
     public static void printArray(int[] array) {
         for (int element : array) {
             System.out.println(element);
@@ -198,7 +197,6 @@ public class Main {
     }
 
     // 2. Напишите метод, который принимает массив целых чисел и возвращает сумму всех его элементов.
-
     public static int sumArray(int[] numbers) {
         if (numbers == null) {
             return 0;
@@ -211,7 +209,6 @@ public class Main {
     }
 
     // 3. Реализуйте метод для поиска минимального элемента в одномерном массиве
-
     public static int findMin(int[] numbers) {
         if (numbers == null || numbers.length == 0) {
             throw new IllegalArgumentException("Массив не должен быть null или пустым");
@@ -226,7 +223,6 @@ public class Main {
     }
 
     // 3. Создайте массив строк, инициализируйте его названиями месяцев года. Выведите все строки, начинающиеся на букву "М"
-
     public static void printMonthsStartingWithM(String[] months) {
         System.out.println("Месяцы, начинающиеся на 'М':");
         for (String month : months) {
@@ -237,7 +233,6 @@ public class Main {
     }
 
     // 5. Напишите метод, который инвертирует порядок элементов в одномерном массиве
-
     public static void reverseArray(int[] array) {
         if (array == null) {
             throw new IllegalArgumentException("Массив не должен быть null");
@@ -256,14 +251,10 @@ public class Main {
             right--;
         }
         System.out.println("Инвертированный массив чисел:");
-        for (int num : array) {
-            System.out.print(num + " ");
-        }
-        System.out.println();
+        printArray(array);
     }
 
     // 6. Напишите метод, который проверяет, есть ли в массиве повторяющиеся элементы
-
     public static Integer findFirstDuplicate(int[] array) {
         if (array == null) {
             throw new IllegalArgumentException("Массив не должен быть null");
@@ -279,7 +270,6 @@ public class Main {
     }
 
     // 7. Напишите метод, который заменяет все отрицательные числа в массиве на их абсолютные значения.
-
     public static void replaceNegativesWithAbsolute(int[] array) {
         if (array == null) {
             throw new IllegalArgumentException("Массив не должен быть null");
@@ -289,15 +279,11 @@ public class Main {
                 array[i] = -array[i];
             }
         }
-        for (int num : array) {
-            System.out.print(num + " ");
-        }
-        System.out.println();
+        printArray(array);
     }
 
     // Многомерные массивы
     // 1. Создайте двумерный массив 3x3, заполните его единицами на главной диагонали и нулями в остальных ячейках. Выведите массив
-
     public static int[][] createAndPrintDiagonalMatrix() {
         int[][] matrix = new int[3][3];
         for (int i = 0; i < matrix.length; i++) {
@@ -315,7 +301,6 @@ public class Main {
     }
 
     // 2. Напишите метод, вычисляющий сумму всех элементов в двумерном массиве
-
     public static int sumOfElements(int[][] array) {
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
@@ -327,7 +312,6 @@ public class Main {
     }
 
     // 3. Реализуйте поиск максимального элемента в матрице и вывод его координат (строка, столбец)
-
     public static int[] findMaxElement(int[][] matrix) {
         int max = Integer.MIN_VALUE;
         int rowIndex = -1;
@@ -345,7 +329,6 @@ public class Main {
     }
 
     // 4. Реализуйте проверку, является ли двумерный массив квадратным (количество строк = количеству столбцов)
-
     public static boolean isSquareMatrix(int[][] matrix) {
         if (matrix == null) {
             return false;
@@ -365,7 +348,6 @@ public class Main {
 
     /* 5. Напишите метод, который находит сумму элементов каждой строки, минимальное и
           максимальное значение двумерного массива и выводит результаты */
-
     public static String analyzeMatrix(int[][] matrix) {
         if (matrix == null || matrix.length == 0) {
             return "Матрица пустая или не задана.";
@@ -388,7 +370,6 @@ public class Main {
     }
 
     // 6. Создайте двумерный массив, заполните его так, чтобы элементы на четных позициях были 0, на нечетных — 1.
-
     public static String generateAndPrintMatrix(Integer rows, Integer cols) {
         if (rows == null || cols == null || rows <= 0 || cols <= 0) {
             return "Матрица не задана или размеры некорректны.";
